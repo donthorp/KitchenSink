@@ -10,9 +10,12 @@
 	// set on ready state change function
 	c.onreadystatechange = function()
 	{
-		Titanium.API.debug('>>>>>>>>>>>>>>>>>>>>>>>> readyState = ' + this.readyState)
+		Titanium.API.debug('>>>>>>>>>>>>>>>>>>>>>>>> readyState = ' + this.readyState);
+		Titanium.API.debug('>>>>>>>>>>>>>>>>>>>>>>>> status = ' + this.status);
+		Titanium.API.debug('>>>>>>>>>>>>>>>>>>>>>>>> statusText = ' + this.statusText);
 		if (this.readyState == 4)
 		{
+			
 			document.getElementById('html').innerHTML = this.responseText;
 		}
 	};
